@@ -1,5 +1,28 @@
 import "../style/main.scss";
-import Typewriter from "typewriter-effect/dist/core";
+import * as icons from "./icons.js";
+import * as idioma from "./idioma.js";
+
+const progDiv = document.querySelector("#prog");
+const desDiv = document.querySelector("#des");
+
+// Definimos las carpetas de los íconos
+const iconsDes = [];
+const iconsProg = [];
+
+// Guardar las posiciones de los íconos para evitar solapamientos
+let positionsProg = [];
+let positionsDes = [];
+
+icons.addIcons(progDiv, "icons prog", iconsProg, positionsProg);
+icons.addIcons(desDiv, "icons des", iconsDes, positionsDes);
+
+idioma.changeLanguage("es");
+
+// Seleccionamos los divs donde se añadirán los íconos
+
+
+
+// import Typewriter from "typewriter-effect/dist/core";
 
 // Asegurarse de que el DOM esté cargado antes de ejecutar el código
 // document.addEventListener("DOMContentLoaded", () => {

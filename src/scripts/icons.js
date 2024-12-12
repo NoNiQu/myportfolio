@@ -53,7 +53,7 @@ function getRandomPosition(container, positions) {
 }
 
 // Función para agregar íconos aleatorios a un contenedor
-function addIcons(container, iconsFolder, iconsArray, positions) {
+export function addIcons(container, iconsFolder, iconsArray, positions) {
   iconsArray.forEach(icon => {
     // Crear elemento img
     const img = document.createElement("img");
