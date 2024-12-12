@@ -18,10 +18,10 @@ header {
       }
       nav {
         @include flex-center(flex, space-between, center);
-
         a {
           text-decoration: none;
           color: $blanco;
+          font-size: 16px;
           text-transform: lowercase;
           position: relative;
           display: inline-block;
@@ -43,11 +43,37 @@ header {
             width: 100%; // Expande el borde desde el centro hacia los lados
           }
         }
-
-        
-
-        width: 25%;
+        width: 30%;
       }
+      .idioma {
+        button {
+          border: none;
+          background: none;
+          color: $blanco;
+          font: inherit;
+          position: relative;
+          display: inline-block;
+          padding-bottom: 10px;
+          text-transform: lowercase;
+          cursor: pointer;
+      
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+          }
+      
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }      
     }
   }
 }
