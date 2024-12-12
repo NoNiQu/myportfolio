@@ -1,0 +1,53 @@
+@use "globals" as *;
+
+header {
+  // @include hero("../assets/fondoPX.png");
+  display: flex;
+  background-color: $gris;
+
+  .hero {
+    width: 100%;
+    .top-bar {
+      @include flex-center(flex, space-between, center);
+      padding: $padd-2;
+      color: $blanco;
+      width: 100%;
+
+      img {
+        width: 50px;
+      }
+      nav {
+        @include flex-center(flex, space-between, center);
+
+        a {
+          text-decoration: none;
+          color: $blanco;
+          text-transform: lowercase;
+          position: relative;
+          display: inline-block;
+          padding-bottom: 10px; // Añade más espacio entre el texto y la línea
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0; // Línea fija en la misma posición
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease; // Animación suave para expandir la línea
+          }
+
+          &:hover::after {
+            width: 100%; // Expande el borde desde el centro hacia los lados
+          }
+        }
+
+        
+
+        width: 25%;
+      }
+    }
+  }
+}

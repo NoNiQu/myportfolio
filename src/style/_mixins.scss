@@ -1,0 +1,74 @@
+@use "sass:map";
+//@use "_variable.scss";
+
+@mixin respond-to($breakpoint) {
+    $breakpoints: (
+      "small": "max-width: 768px",
+    );
+
+    $query: map.get($breakpoints, $breakpoint);
+
+    @if $query {
+      @media (#{$query}) {
+        @content;
+      }
+
+    } @else {
+        @error "No se encontró el breakpoint #{$breakpoint}.";
+    }
+}
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+} 
+  
+@mixin responsive-font($size-mobile, $size-desktop) {
+    font-size: $size-mobile;
+  
+    @media (min-width: 768px) {
+      font-size: $size-desktop;
+    }
+}
+  
+@mixin button($color, $bg-color) {
+    color: $color;
+    background-color: $bg-color;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  
+    &:hover {
+      background-color: darken($bg-color, 10%);
+      cursor: pointer;
+    }
+}
+
+@mixin hero($image){
+    width: 100%;
+    height: 100vh;
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@mixin wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 5rem 0;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+  @include respond-to("small"){
+    display: flex;
+    flex-direction: column;
+  }
+}
+  
