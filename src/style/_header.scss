@@ -1,79 +1,118 @@
 @use "globals" as *;
 
 header {
-  // @include hero("../assets/fondoPX.png");
   display: flex;
-  background-color: $gris;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  flex-grow: 0;
+  background-color: rgba(240, 240, 227, 0.63);
 
-  .hero {
+  .top-bar {
+    @include flex-center(flex, space-around, center);
+    padding: $padd-2;
+    color: $negro;
     width: 100%;
-    .top-bar {
+    img {
+      width: 50px;
+    }
+
+    nav {
       @include flex-center(flex, space-between, center);
-      padding: $padd-2;
-      color: $blanco;
-      width: 100%;
+      a {
+        text-decoration: none;
+        color: $negro;
+        font-size: 16px;
+        text-transform: lowercase;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
 
-      img {
-        width: 50px;
-      }
-      nav {
-        @include flex-center(flex, space-between, center);
-        a {
-          text-decoration: none;
-          color: $blanco;
-          font-size: 16px;
-          text-transform: lowercase;
-          position: relative;
-          display: inline-block;
-          padding-bottom: 10px; // Añade más espacio entre el texto y la línea
-
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0; // Línea fija en la misma posición
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0%;
-            height: 2px;
-            background-color: white;
-            transition: width 0.3s ease; // Animación suave para expandir la línea
-          }
-
-          &:hover::after {
-            width: 100%; // Expande el borde desde el centro hacia los lados
-          }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0%;
+          height: 2px;
+          background-color: $negro;
+          transition: width 0.3s ease; 
         }
-        width: 30%;
-      }
-      .idioma {
-        button {
-          border: none;
-          background: none;
-          color: $blanco;
-          font: inherit;
-          position: relative;
-          display: inline-block;
-          padding-bottom: 10px;
-          text-transform: lowercase;
-          cursor: pointer;
-      
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0%;
-            height: 2px;
-            background-color: white;
-            transition: width 0.3s ease;
-          }
-      
-          &:hover::after {
-            width: 100%;
-          }
+        &:hover::after {
+          width: 100%;
         }
-      }      
+      }
+      width: 30%;
+    }
+
+    .idioma {
+      button {
+        border: none;
+        background: none;
+        color: $negro;
+        font: inherit;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+        text-transform: lowercase;
+        cursor: pointer;
+    
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0%;
+          height: 2px;
+          background-color: $negro;
+          transition: width 0.3s ease;
+        }
+    
+        &:hover::after {
+          width: 100%;
+        }
+      }
     }
   }
 }
+
+#oficio {
+  @include flex-center(flex, space-between, center);
+  flex-grow: 1;
+
+  #prog, #des {
+    width: 100%;
+    height: 69%;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    a{
+      background-color:  rgba(240, 240, 227, 0.76);
+      border: 5px solid black;
+      border-radius: 16px;
+      padding: 1rem;
+      color:$negro;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 2;
+    }
+
+    div {
+      height: 50%;
+      position: relative; 
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $negro;
+    font-size: 50px;
+  }
+}
+
