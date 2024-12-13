@@ -4,7 +4,16 @@ const desDiv = document.querySelector("#des");
 
 // Definimos las carpetas de los íconos
 const iconsDes = ["ai.svg", "figma.svg", "id.svg", "pr.svg", "ps.svg"];
-const iconsProg = ["css3.svg", "html5.svg", "java.svg", "js2.svg", "node.svg", "react.svg", "sass.svg", "bootstrap.svg"];
+const iconsProg = [
+  "css3.svg",
+  "html5.svg",
+  "java.svg",
+  "js2.svg",
+  "node.svg",
+  "react.svg",
+  "sass.svg",
+  "bootstrap.svg",
+];
 
 // Guardar las posiciones de los íconos para evitar solapamientos
 let positionsProg = [];
@@ -34,13 +43,15 @@ function getRandomPosition(container, positions) {
     y = Math.random() * (containerHeight - iconSize - margin);
 
     // Verificar si la posición se solapa con otras
-    overlapping = positions.some(pos => {
+    overlapping = positions.some((pos) => {
       const distance = Math.sqrt((x - pos.x) ** 2 + (y - pos.y) ** 2);
       return distance < iconSize + margin; // Compara la distancia y la evita si es menor que el tamaño más el margen
     });
 
     // Verificar que el ícono no esté demasiado cerca del centro (donde está el enlace)
-    const distanceFromCenter = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2);
+    const distanceFromCenter = Math.sqrt(
+      (x - centerX) ** 2 + (y - centerY) ** 2
+    );
     if (distanceFromCenter < linkSize + centerMargin) {
       overlapping = true; // Si está cerca del centro, volvemos a calcular
     }
@@ -54,7 +65,7 @@ function getRandomPosition(container, positions) {
 
 // Función para agregar íconos aleatorios a un contenedor
 export function addIcons(container, iconsFolder, iconsArray, positions) {
-  iconsArray.forEach(icon => {
+  iconsArray.forEach((icon) => {
     // Crear elemento img
     const img = document.createElement("img");
     img.src = `assets/${iconsFolder}/${icon}`;
@@ -70,7 +81,9 @@ export function addIcons(container, iconsFolder, iconsArray, positions) {
     img.style.top = `${y}px`;
 
     // Agregar ícono al contenedor adecuado
-    const iconsContainer = container.querySelector(`#icons${iconsFolder === "icons prog" ? "prog" : "des"}`);
+    const iconsContainer = container.querySelector(
+      `#icons${iconsFolder === "icons prog" ? "prog" : "des"}`
+    );
     iconsContainer.appendChild(img);
   });
 }
@@ -82,5 +95,3 @@ desDiv.style.position = "relative";
 // Añadir íconos a los divs
 addIcons(progDiv, "icons prog", iconsProg, positionsProg);
 addIcons(desDiv, "icons des", iconsDes, positionsDes);
-
-
