@@ -64,7 +64,10 @@ function getRandomPosition(container, positions) {
 }
 
 // Función para agregar íconos aleatorios a un contenedor
-export function addIcons(container, iconsFolder, iconsArray, positions) {
+function addIcons(container, iconsFolder, iconsArray, positions) {
+  const iconsContainer = container.querySelector(
+    `#icons${iconsFolder === "icons prog" ? "prog" : "des"}`
+  );
   iconsArray.forEach((icon) => {
     // Crear elemento img
     const img = document.createElement("img");
@@ -80,11 +83,34 @@ export function addIcons(container, iconsFolder, iconsArray, positions) {
     img.style.left = `${x}px`;
     img.style.top = `${y}px`;
 
+    // Añadir animación de aparición
+    img.style.opacity = "0";
+    img.style.transition = "opacity 0.5s ease";
+
     // Agregar ícono al contenedor adecuado
-    const iconsContainer = container.querySelector(
-      `#icons${iconsFolder === "icons prog" ? "prog" : "des"}`
-    );
     iconsContainer.appendChild(img);
+
+    // Forzar el reflujo para que la animación se active
+    setTimeout(() => {
+      img.style.opacity = "1";
+    }, 50);
+  });
+}
+
+// Función para eliminar íconos con animación
+function removeIcons(container) {
+  const iconsContainer = container.querySelector("div");
+  const icons = iconsContainer.querySelectorAll("img");
+
+  icons.forEach((icon) => {
+    // Añadir animación de desaparición
+    icon.style.opacity = "0";
+    icon.style.transition = "opacity 0.5s ease";
+
+    // Eliminar el ícono después de la animación
+    setTimeout(() => {
+      icon.remove();
+    }, 500);
   });
 }
 
@@ -92,6 +118,37 @@ export function addIcons(container, iconsFolder, iconsArray, positions) {
 progDiv.style.position = "relative";
 desDiv.style.position = "relative";
 
-// Añadir íconos a los divs
-addIcons(progDiv, "icons prog", iconsProg, positionsProg);
-addIcons(desDiv, "icons des", iconsDes, positionsDes);
+// Variables para rastrear si los íconos están visibles
+let iconsVisibleProg = false;
+let iconsVisibleDes = false;
+
+// Función para manejar clics en los enlaces
+function handleClick(event) {
+  event.preventDefault();
+  const targetId = event.target.id;
+
+  if (targetId === "programmerText") {
+    if (iconsVisibleProg) {
+      removeIcons(progDiv);
+      iconsVisibleProg = false;
+    } else {
+      positionsProg = []; // Reiniciar posiciones
+      addIcons(progDiv, "icons prog", iconsProg, positionsProg);
+      iconsVisibleProg = true;
+    }
+  } else if (targetId === "designerText") {
+    if (iconsVisibleDes) {
+      removeIcons(desDiv);
+      iconsVisibleDes = false;
+    } else {
+      positionsDes = []; // Reiniciar posiciones
+      addIcons(desDiv, "icons des", iconsDes, positionsDes);
+      iconsVisibleDes = true;
+    }
+  }
+}
+
+// Añadir listeners a los enlaces
+document.querySelector("#programmerText").addEventListener("click", handleClick);
+document.querySelector("#designerText").addEventListener("click", handleClick);
+

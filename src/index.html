@@ -5,15 +5,16 @@
   <meta charset="UTF-8" />
   <link rel="shortcut icon" href="assets/rrss/camara foto.svg" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title id="pageTitle">Marcos Alarcon Portfolio</title>
 </head>
 
 <body>
   <header>
-    <section class="top-bar">
+    <section id="inicio" class="top-bar">
       <img src="assets/b7a1efc0-d9c4-4d7c-b6df-001ce9d61fbd.webp" alt="logo">
       <nav>
-        <a href="#aboutme" id="aboutMe">About me</a>
+        <a href="#about" id="aboutMe">About me</a>
         <a href="#skill" id="skills">Skills</a>
         <a href="#proyect" id="projects">My projects</a>
         <a href="#media" id="socials">Socials</a>
@@ -35,11 +36,89 @@
     </section>
   </header>
   <main>
-    <section id="aboutme"></section>
-    <section id="skill"></section>
-    <section id="proyect"></section>
-    <section id="media"></section>
+    <section id="about">
+      <div class="portada">
+        <h1 id="sobre">sobre mí</h1>
+        <div><a href="#inicio" class="buttonup">up</a></div>
+      </div>
+      <div class="contenedor">
+        <div class="print">
+          <div>
+            <h1 class="title" id="title">hola soy marcos</h1>
+            <p class="subtitle" id="subtitle">un apasionado del desarrollo frontend y el diseño gráfico toledano</p>
+          </div>
+          <div class="card-container">
+            <div class="card1">
+              <p id="card1">Tras estudiar Desarrollo Web en
+                el IES Azarquiel y Diseño Gráfico en la Escuela de Artes de Toledo, he
+                adquirido un enfoque multidisciplinar que me permite combinar la funcionalidad con la creatividad en cada
+                proyecto.
+              </p>
+            </div>
+            <div class="card2">
+              <p id="card2">Me apasiona crear soluciones digitales que no solo sean intuitivas, sino también visualmente
+                atractivas. Mi objetivo es construir experiencias de usuario excepcionales y diseños que cuenten historias. 
+                Disfruto de trabajar tanto en la parte técnica del desarrollo web como en el aspecto visual del diseño, buscando siempre
+                un equilibrio perfecto entre ambos.</p>
+            </div>
+            <div class="card3">
+              <p id="card3">
+                A lo largo de mi formación, he trabajado en diversos proyectos donde he mejorado mis habilidades en
+                HTML, CSS, JavaScript y React así como en el uso de herramientas como Photoshop, Illustrator, InDesign y Figma. 
+                Mi enfoque es siempre práctico, buscando soluciones eficientes y personalizadas para cada trabajo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skill">
+      <div class="portada">
+        <div><a href="#inicio" class="buttonup">up</a></div>
+        <h1 id="hab">habilidades</h1>
+      </div>
+      <div>
+        <p></p>
+      </div>
+    </section>
+    <section id="proyect">
+      <div class="portada">
+        <h1 id="proy">mis proyectos</h1>
+        <div><a href="#inicio" class="buttonup">up</a></div>
+      </div>
+      <div>
+        <p></p>
+      </div>
+    </section>
+    <section id="media">
+      <div class="portada">
+        <div><a href="#inicio" class="buttonup">up</a></div>
+        <h1 id="soc">redes sociales</h1>
+      </div>
+      <div class="container">
+        <div class="mensaje">
+          <p id="follow">sígueme en redes sociales y compartamos experiencias</p>
+        </div>
+        <div class="social-container">
+          <a href="https://x.com/NoNiQtv_" target="_blank" class="social-icon">
+            <img src="assets/rrss/twitter.svg" alt="Twitter">
+          </a>
+          <a href="#" target="_blank" class="social-icon">
+            <img src="assets/rrss/instagram-brands-solid.svg" alt="Instagram">
+          </a>
+          <a href="#" target="_blank" class="social-icon">
+            <img src="assets/rrss/linkedn.svg" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/NoNiQu" target="_blank" class="social-icon">
+            <img src="assets/rrss/github.svg" alt="GitHub">
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer>
+    <h2>&copy; Marcos Alarcon Alguacil 2025</h2>
+  </footer>
   <script type="module" src="scripts/main.js"></script>
 </body>
 

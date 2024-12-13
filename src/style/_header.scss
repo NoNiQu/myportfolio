@@ -6,7 +6,6 @@ header {
   height: 100vh;
   width: 100%;
   flex-grow: 0;
-  background-color: rgba(240, 240, 227, 0.63);
 
   .top-bar {
     @include flex-center(flex, space-around, center);
@@ -57,6 +56,7 @@ header {
         padding-bottom: 10px;
         text-transform: lowercase;
         cursor: pointer;
+        font-size: 20px;
     
         &::after {
           content: "";
@@ -91,7 +91,7 @@ header {
     z-index: 1;
 
     a{
-      background-color:  rgba(240, 240, 227, 0.76);
+      background-color: rgba(240, 240, 227, 0.63);
       border: 5px solid black;
       border-radius: 16px;
       padding: 1rem;

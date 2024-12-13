@@ -1,0 +1,83 @@
+@use "globals" as *;
+
+#about {
+  height: 100vh;
+  width: 100%;
+
+  .portada {
+    @include flex-center(row, space-between, center);
+    width: 80%;
+    margin: 0 auto;
+    padding: 69px 0;
+
+    #sobre {
+      font-size: 69px;
+    }
+
+    .buttonup {
+      text-decoration: none;
+      color: $negro;
+      font-size: 20px;
+      text-transform: lowercase;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background-color: $negro;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+
+  .contenedor {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+
+    .print {
+      @include flex-center(row, space-between, center);
+      flex-direction: column;
+      height: 70%;
+
+      .title {
+        text-align: center;
+        font-size: 69px;
+        text-transform: lowercase;
+      }
+
+      .subtitle {
+        font-size: 25px;
+        margin-top: 20px;
+        text-transform: lowercase;
+      }
+
+      .card-container {
+        @include flex-center(row, space-between, start);
+
+        .card1,
+        .card2,
+        .card3 {
+          width: 28%;
+          font-size: 18px;
+          padding-bottom: 15px;
+          padding-right: 15px;
+          border-bottom: 3px solid #1d1d1d; // Borde en la parte inferior
+          border-right: 3px solid #1d1d1d; // Borde en el lado derecho
+        }
+      }
+    }
+  }
+}
