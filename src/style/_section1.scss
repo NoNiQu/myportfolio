@@ -16,7 +16,7 @@
 
     .buttonup {
       text-decoration: none;
-      color: $negro;
+      color: #333333;
       font-size: 20px;
       text-transform: lowercase;
       position: relative;
@@ -31,7 +31,7 @@
         transform: translateX(-50%);
         width: 0%;
         height: 2px;
-        background-color: $negro;
+        background-color: #333333;
         transition: width 0.3s ease;
       }
 
@@ -40,7 +40,6 @@
       }
     }
   }
-
 
   .contenedor {
     width: 80%;
@@ -74,8 +73,8 @@
           font-size: 18px;
           padding-bottom: 15px;
           padding-right: 15px;
-          border-bottom: 3px solid #1d1d1d; // Borde en la parte inferior
-          border-right: 3px solid #1d1d1d; // Borde en el lado derecho
+          border-bottom: 3px solid #333333; // Borde en la parte inferior
+          border-right: 3px solid #333333; // Borde en el lado derecho
         }
       }
     }

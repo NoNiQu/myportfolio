@@ -16,7 +16,7 @@
 
     .buttonup {
       text-decoration: none;
-      color: $negro;
+      color: #333333;
       font-size: 20px;
       text-transform: lowercase;
       position: relative;
@@ -31,7 +31,7 @@
         transform: translateX(-50%);
         width: 0%;
         height: 2px;
-        background-color: $negro;
+        background-color: #333333;
         transition: width 0.3s ease;
       }
 
@@ -40,5 +40,4 @@
       }
     }
   }
-
 }
