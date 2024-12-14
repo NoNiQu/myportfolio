@@ -1,3 +1,5 @@
+//no me funciona
+
 import Typewriter from 'typewriter-effect/dist/core';
 
 export function initTypewriter(language, translations) {

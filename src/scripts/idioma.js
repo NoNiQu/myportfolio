@@ -1,6 +1,3 @@
-// idioma.js
-
-// Definir las traducciones
 const translations = {
   es: {
     pageTitle: "Marcos Alarcon Portfolio",
@@ -58,11 +55,9 @@ const translations = {
   },
 };
 
-// Función para cambiar el idioma de la página
 export function changeLanguage(language) {
   const lang = translations[language];
 
-  // Cambiar los textos del contenido de la página
   document.getElementById("pageTitle").innerText = lang.pageTitle;
   document.getElementById("aboutMe").innerText = lang.aboutMe;
   document.getElementById("skills").innerText = lang.skills;
@@ -77,13 +72,11 @@ export function changeLanguage(language) {
   document.getElementById("card3").innerText = lang.card3;
   document.getElementById("follow").innerText = lang.follow;
 
-  // Cambiar los títulos h1 con los nuevos ids
   document.getElementById("sobre").innerText = lang.sobre;
   document.getElementById("hab").innerText = lang.hab;
   document.getElementById("proy").innerText = lang.proy;
   document.getElementById("soc").innerText = lang.soc;
 
-  // Cambiar los textos adicionales
   document.querySelectorAll(".buttonup").forEach((button) => {
     button.innerText = lang.buttonup;
   });
@@ -97,19 +90,15 @@ export function changeLanguage(language) {
   document.getElementById("nombreproyecto2").innerText = lang.proj2Title;
   document.getElementById("descripcion2").innerText = lang.proj2Text;
 
-  // Cambiar los botones de idioma
   document.getElementById("es").classList.remove("active");
   document.getElementById("en").classList.remove("active");
   document.getElementById(language).classList.add("active");
 
-  // Mostrar solo el botón correspondiente
   document.getElementById("es").style.display = language === "en" ? "inline-block" : "none";
   document.getElementById("en").style.display = language === "es" ? "inline-block" : "none";
 }
 
-// Llamar al cambiar de idioma
 document.getElementById("es").addEventListener("click", () => changeLanguage("es"));
 document.getElementById("en").addEventListener("click", () => changeLanguage("en"));
 
-// Cargar la página en español por defecto
 changeLanguage("es");

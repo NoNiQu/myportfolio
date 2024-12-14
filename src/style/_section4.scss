@@ -6,22 +6,22 @@
 
   .portada {
     @include flex-center(row, space-between, center);
-    width: 80%;
+    width: $portada-width;
     margin: 0 auto;
-    padding: 69px 0;
+    padding: $padd-top-portada;
 
     #soc {
-      font-size: 69px;
+      font-size: $size-title;
     }
 
     .buttonup {
       text-decoration: none;
-      color: #333333;
-      font-size: 20px;
+      color: $negro;
+      font-size: $size-20;
       text-transform: lowercase;
       position: relative;
       display: inline-block;
-      padding-bottom: 10px;
+      padding-bottom: $padd-bottom-link;
 
       &::after {
         content: "";
@@ -30,9 +30,9 @@
         left: 50%;
         transform: translateX(-50%);
         width: 0%;
-        height: 2px;
-        background-color: #333333;
-        transition: width 0.3s ease;
+        height: $height2p;
+        background-color: $negro;
+        transition: $transition1;
       }
 
       &:hover::after {
@@ -43,35 +43,35 @@
 
   .container {
     @include flex-center(flex, space-around, center);
-    height: 60%;
+    height: $height-60;
     width: 100%;
     flex-direction: column;
 
     .mensaje {
       text-align: center;
-      font-size: 30px;
+      font-size: $size-mensaje;
       text-transform: lowercase;
     }
 
     .social-container {
       @include flex-center(row, space-evenly, center);
-      margin-top: 20px;
+      margin-top: $margintop20;
       width: 100%;
     }
 
     a {
       text-decoration: none;
-      width: 100px; // Tamaño de los íconos
-      height: 50px;
+      width: $width100p;
+      height: $height50p;
     }
 
     img {
-      width: 100%; // Hacer que la imagen ocupe todo el contenedor
+      width: 100%;
       height: auto;
-      padding-bottom: 15px;
-      padding-right: 15px;
-      border-bottom: 3px solid #333333; // Borde en la parte inferior
-      border-right: 3px solid #333333; // Borde en el lado derecho
+      padding-bottom: $padd-cardbot;
+      padding-right: $padd-cardbot;
+      border-bottom: $border-color;
+      border-right: $border-color;
     }
   }
 
@@ -79,11 +79,11 @@
     height: 100%;
     .portada {
       @include flex-center(row, center, center);
-      padding: 30px 0;
+      padding: $padd-top-portada-r;
 
       #soc {
         text-align: center;
-        font-size: 40px;
+        font-size: $size-40;
       }
       .buttonup{
         display: none;
@@ -92,14 +92,14 @@
 
     .container{
       .mensaje{
-        font-size: 20px;
+        font-size: $size-20;
       }
       .social-container{
         @include flex-center(row, center, center);
         flex-direction: column;
       }
       a{
-        margin-top: 100px;
+        margin-top: $margintop100;
       }
     }
 

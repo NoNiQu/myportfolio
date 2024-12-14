@@ -6,22 +6,22 @@
 
   .portada {
     @include flex-center(row, space-between, center);
-    width: 80%;
+    width: $portada-width;
     margin: 0 auto;
-    padding: 69px 0;
+    padding: $padd-top-portada;
 
     #proy {
-      font-size: 69px;
+      font-size: $size-title;
     }
 
     .buttonup {
       text-decoration: none;
-      color: #333333;
-      font-size: 20px;
+      color: $negro;
+      font-size: $size-button;
       text-transform: lowercase;
       position: relative;
       display: inline-block;
-      padding-bottom: 10px;
+      padding-bottom: $padd-bottom-link;
 
       &::after {
         content: "";
@@ -30,9 +30,9 @@
         left: 50%;
         transform: translateX(-50%);
         width: 0%;
-        height: 2px;
-        background-color: #333333;
-        transition: width 0.3s ease;
+        height: $height2p;
+        background-color:$negro;
+        transition: $transition1;
       }
 
       &:hover::after {
@@ -46,15 +46,15 @@
   }
 
   .container{
-    width: 80%;
+    width: $card-container-width;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: $margintop60;
     text-transform: lowercase;
 
     .title{
       text-align: center;
-      margin-bottom: 50px;
-      font-size: 20px;
+      margin-bottom: $margintop50;
+      font-size: $size-20;
     }
 
     .container-card{
@@ -63,24 +63,24 @@
         height: 100%;
       
         .card-img-top {
-          border-top-left-radius: 0.25rem;
-          border-top-right-radius: 0.25rem;
-          width: 600px;
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+          width: $card-img-width;
         }
       
         .card-title {
-          font-size: 30px;
+          font-size: $size-card-title;
           text-align: center;
-          margin-top: 20px;
+          margin-top: $margintop20;
           font-weight: bold;
-          color: #333333;
+          color: $negro;
         }
       
         .card-text {
-          color: #333333;
-          font-size: 16px;
+          color: $negro;
+          font-size: $size-card-text;
           text-align: center;
-          margin-top: 20px;
+          margin-top: $margintop20;
         }
       }
     }
@@ -91,10 +91,10 @@
     height: 100%;
     .portada {
       @include flex-center(row, center, center);
-      padding: 30px 0;
+      padding: $padd-top-portada-r;
 
       #proy {
-        font-size: 40px;
+        font-size: $size-40;
       }
       .buttonup{
         display: none;
@@ -109,9 +109,9 @@
         flex-direction: column;
 
         .card{
-          margin-top: 60px;
+          margin-top: $margintop60;
           .card-img-top{
-            width: 350px;
+            width: $responsive-card-img-width;
           }
         }
       }

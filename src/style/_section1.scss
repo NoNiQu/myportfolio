@@ -6,22 +6,22 @@
 
   .portada {
     @include flex-center(row, space-between, center);
-    width: 80%;
+    width: $portada-width;
     margin: 0 auto;
-    padding: 69px 0;
+    padding: $padd-top-portada;
 
     #sobre {
-      font-size: 69px;
+      font-size: $font-size-title;
     }
 
     .buttonup {
       text-decoration: none;
-      color: #333333;
-      font-size: 20px;
+      color: $negro;
+      font-size: $size-button;
       text-transform: lowercase;
       position: relative;
       display: inline-block;
-      padding-bottom: 10px;
+      padding-bottom: $padd-bottom-link;
 
       &::after {
         content: "";
@@ -30,9 +30,9 @@
         left: 50%;
         transform: translateX(-50%);
         width: 0%;
-        height: 2px;
-        background-color: #333333;
-        transition: width 0.3s ease;
+        height: $height2p;
+        background-color: $negro;
+        transition: $transition1;
       }
 
       &:hover::after {
@@ -42,24 +42,24 @@
   }
 
   .contenedor {
-    width: 80%;
-    height: 80%;
+    width: $card-container-width;
+    height: $height-80;
     margin: 0 auto;
 
     .print {
       @include flex-center(row, space-between, center);
       flex-direction: column;
-      height: 70%;
+      height: $height-70;
 
       .title {
         text-align: center;
-        font-size: 69px;
+        font-size: $font-size-title;
         text-transform: lowercase;
       }
 
       .subtitle {
-        font-size: 25px;
-        margin-top: 20px;
+        font-size: $font-size-subtitle;
+        margin-top: $margintop20;
         text-transform: lowercase;
       }
 
@@ -69,12 +69,12 @@
         .card1,
         .card2,
         .card3 {
-          width: 28%;
-          font-size: 18px;
-          padding-bottom: 15px;
-          padding-right: 15px;
-          border-bottom: 3px solid #333333; // Borde en la parte inferior
-          border-right: 3px solid #333333; // Borde en el lado derecho
+          width: $card-width;
+          font-size: $size-card-text;
+          padding-bottom: $padd-cardbot;
+          padding-right: $padd-card;
+          border-bottom: $borde-card;
+          border-right: $borde-card;
         }
       }
     }
@@ -84,10 +84,10 @@
     height: 100%;
     .portada {
       @include flex-center(row, center, center);
-      padding: 30px 0;
+      padding: $padd-top-portada-r;
 
       #sobre {
-        font-size: 40px;
+        font-size: $size-40;
       }
       .buttonup{
         display: none;
@@ -97,10 +97,10 @@
       .print{
         text-align: center;
         .title{
-          font-size: 40px;
+          font-size: $size-40;
         }
         .subtitle{
-          font-size: 20px;
+          font-size: $size-20;
         }
         .card-container{
           @include flex-center(row, center, center);
@@ -108,19 +108,16 @@
           .card1,
           .card2,
           .card3 {
-            margin-top: 50px;
+            margin-top: $margintop50;
             width: 100%;
-            font-size: 15px;
-            padding-bottom: 15px;
-            padding-right: 15px;
-            border-bottom: 3px solid #333333; // Borde en la parte inferior
-            border-right: 3px solid #333333; // Borde en el lado derecho
+            font-size: $size-15;
+            padding-bottom: $padd-cardbot;
+            padding-right: $padd-cardbot;
+            border-bottom: $border-color;
+            border-right: $border-color;
           }
         }
       }
     }
   }
-
-  ;
-
 }

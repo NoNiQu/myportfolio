@@ -7,23 +7,24 @@
 
   .portada {
     @include flex-center(row, center, center);
-    width: 80%;
+    width: $portada-width;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: $padd-top-portada-r;
 
     #hab {
-      font-size: 40px;
+      font-size: $size-40;
     }
 
   }
 
   .centrado{
-    margin-top: 30px;
+    margin-top: $margintop30;
     width: 100%;
     text-align: center;
+    text-transform: lowercase;
 
     p{
-      margin-top: 20px;
+      margin-top: $margintop20;
     }
   }
 

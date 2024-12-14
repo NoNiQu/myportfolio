@@ -1,42 +1,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap");
 
-/* Colors */
+/* --------------------------------------------
+   COLORS
+-------------------------------------------- */
 $blanco: #ffffff;
 $gris: #aaaaaa;
-$negro: #000000;
-$primario: #880000;
-$secundario: #aeeeee;
+$negro: #333333;
 
-/* Typography - Line Heights */
+$fondo-claro: #f5f5f5;
+$borde: #333333;
+
+/* --------------------------------------------
+   TYPOGRAPHY
+-------------------------------------------- */
+
+/* Font Families */
+$family-source-code-pro: "Source Code Pro", monospace;
+
+/* Font Weights */
+$weight-regular: Regular;
+$weight-semi-bold: Semibold;
+
+/* Font Sizes */
+$size-text-b: 1rem;
+$size-text-a: 1.25rem;
+$size-h3: 1.625rem;
+$size-h2: 2.625rem;
+$size-h1: 4.25rem;
+$size-link: 16px;
+$size-button: 20px;
+$size-title: 69px;
+$size-subtitle: 25px;
+$size-card-title: 30px;
+$size-card-text: 16px;
+$size-mensaje: 30px;
+$size-footer: 30px;
+$size-footer-r: $size-button;
+$size-15: 15px;
+$size-20: 20px;
+$size-40: 40px;
+$size-50: 50px;
+
+/* Line Heights */
 $line-height-text-b: 1.5rem;
 $line-height-text-a: 1.875rem;
 $line-height-h3: 3rem;
 $line-height-h2: 3rem;
 $line-height-h1: 4.5rem;
 
-/* Typography - Font Sizes */
-$size-text-b: 1rem;
-$size-text-a: 1.25rem;
-$size-h3: 1.625rem;
-$size-h2: 2.625rem;
-$size-h1: 4.25rem;
+/* --------------------------------------------
+   SIZES
+-------------------------------------------- */
+$icons: 30px;
+$size-icon: $icons;
 
-/* Typography - Font Families and Weights */
-$family-source-code-pro: "Source Code Pro", monospace;
-$weight-regular: Regular;
-$weight-semi-bold: Semibold;
+$card-width: 28%;
+$responsive-card-width: 100%;
+$card-img-width: 600px;
+$responsive-card-img-width: 350px;
+$width100p: 100px;
 
-$border-radius1: 1rem;
+$height2p: 2px;
+$height50p: 50px;
+$height-50: 50%;
+$height-60: 60%;
+$height-80: 80%;
+$height-70: 70%;
 
-$padd-1: 0.75rem;
+/* --------------------------------------------
+   SPACING (PADDING & MARGIN)
+-------------------------------------------- */
+
+/* Padding */
+$padd-1: 1rem;
 $padd-2: 2rem;
 $padd-top4: 3.5rem;
 $padd-y2: 1.5rem 0;
 $padd-y3: 2.5rem 0;
 
+$padd-bottom-link: 10px;
+$padd-card: 15px;
+$padd-button: 1rem;
+$padd-top-portada: 69px 0;
+$padd-despro: 0 20px;
+$padd-top-portada-r: 30px 0;
+$padd-top-responsive: 30px;
+$padd-cardbot: $padd-card;
+$padd-footer: 30px 0;
+
+/* Margin */
 $margin-1rem: 1rem;
 $margin-15rem: 1.5rem;
 $margin-r2: 2rem;
 $margin-b10: 10rem;
 
-$icons: 30px;
+$margin-container-top: 60px;
+$margin-card-top: 50px;
+$margin-responsive-card-top: 60px;
+$margin-responsive-icon-top: 100px;
+$margintop20: 20px;
+$margintop25: 25px;
+$margintop30: 30px;
+$margintop50: 50px;
+$margintop60: 60px;
+$margintop100: 100px;
+
+/* --------------------------------------------
+   BORDER & BORDER RADIUS
+-------------------------------------------- */
+$border-radius1: 1rem;
+$border-a: 16px;
+$border-radius: 0.25rem;
+
+$borde-card: 3px solid $negro; /* Borde común para las cartas */
+$border-color: 3px solid $negro;
+$border-color2: 4px solid $negro;
+
+/* --------------------------------------------
+   TRANSITIONS
+-------------------------------------------- */
+$transition1: width 0.3s ease;
+
+/* --------------------------------------------
+   MISC
+-------------------------------------------- */
+$font-size-title: 69px; /* Título principal */
+$font-size-subtitle: 25px; /* Subtítulo */
+$portada-width: 80%; /* Ancho de la portada */
+$card-container-width: 80%; /* Ancho del contenedor de las cartas */
+$width-37: 37%;
+$img-size: 50px;
+

@@ -2,14 +2,13 @@
 
 footer {
   text-align: center;
-  font-size: 30px;
-  padding: 30px 0;
-  color: #333333;
+  font-size: $size-footer;
+  padding: $padd-footer;
+  color: $negro;
 
   @include respond-to("small") {
-    font-size: 20px;
-    margin-top: 60px;
-    padding: 30px 0;
+    font-size: $size-footer-r;
+    margin-top: $margintop60;
   }
 
 }
