@@ -31,4 +31,4 @@ Además, he añadido funcionalidades como un **cambio de idioma** y en la págin
 ## 2. Enlaces de interés
 
 - [Enlace a GitHub Pages](https://noniqu.github.io/myportfolio/)
-- [Enlace a Figma]()
+- [Enlace a Figma](https://www.figma.com/design/kNAKbhYeYplQeipxRIJVLE/Portfolio?node-id=9-106&t=7zkefNGtFr8HTdbh-1)
