@@ -72,7 +72,36 @@
       padding-right: 15px;
       border-bottom: 3px solid #333333; // Borde en la parte inferior
       border-right: 3px solid #333333; // Borde en el lado derecho
-      object-fit: fill;
     }
+  }
+
+  @include respond-to("small"){
+    height: 100%;
+    .portada {
+      @include flex-center(row, center, center);
+      padding: 30px 0;
+
+      #soc {
+        text-align: center;
+        font-size: 40px;
+      }
+      .buttonup{
+        display: none;
+      }
+    }
+
+    .container{
+      .mensaje{
+        font-size: 20px;
+      }
+      .social-container{
+        @include flex-center(row, center, center);
+        flex-direction: column;
+      }
+      a{
+        margin-top: 100px;
+      }
+    }
+
   }
 }

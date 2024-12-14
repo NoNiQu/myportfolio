@@ -79,4 +79,48 @@
       }
     }
   }
+
+  @include respond-to("small") {
+    height: 100%;
+    .portada {
+      @include flex-center(row, center, center);
+      padding: 30px 0;
+
+      #sobre {
+        font-size: 40px;
+      }
+      .buttonup{
+        display: none;
+      }
+    }
+    .contenedor{
+      .print{
+        text-align: center;
+        .title{
+          font-size: 40px;
+        }
+        .subtitle{
+          font-size: 20px;
+        }
+        .card-container{
+          @include flex-center(row, center, center);
+          flex-direction: column;
+          .card1,
+          .card2,
+          .card3 {
+            margin-top: 50px;
+            width: 100%;
+            font-size: 15px;
+            padding-bottom: 15px;
+            padding-right: 15px;
+            border-bottom: 3px solid #333333; // Borde en la parte inferior
+            border-right: 3px solid #333333; // Borde en el lado derecho
+          }
+        }
+      }
+    }
+  }
+
+  ;
+
 }

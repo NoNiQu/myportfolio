@@ -23,7 +23,11 @@
     text-align: center;
 
     p{
-      margin: 20px 0;
+      margin-top: 20px;
     }
+  }
+
+  @include respond-to("small"){
+    display: block;
   }
 }
